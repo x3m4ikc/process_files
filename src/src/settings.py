@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'process_files',
 ]
 
@@ -81,11 +82,11 @@ WSGI_APPLICATION = 'src.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": str(os.getenv("POSTGRES_DB", "microservice")),
-        "USER": str(os.getenv("POSTGRES_USER", "postgres")),
-        "PASSWORD": str(os.getenv("POSTGRES_PASSWORD", "postgres")),
-        "HOST": str(os.getenv("DATABASE_HOST", "postgres")),
-        "PORT": os.getenv("POSTGRES_PORT", 5432),
+        "NAME": str(os.getenv("DATABASE_NAME")),
+        "USER": str(os.getenv("DATABASE_USER")),
+        "PASSWORD": str(os.getenv("DATABASE_PASSWORD")),
+        "HOST": str(os.getenv("DATABASE_HOST")),
+        "PORT": os.getenv("DATABASE_PORT"),
     }
 }
 
@@ -130,3 +131,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'

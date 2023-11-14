@@ -1,0 +1,14 @@
+итого 60
+drwx--x--- 12 root root  4096 окт  4 17:22 ./
+drwxr-xr-x 28 root root  4096 окт  4 10:22 ../
+drwx--x--x  4 root root  4096 окт  4 10:22 buildkit/
+drwx--x---  6 root root  4096 окт  4 16:11 containers/
+-rw-------  1 root root    36 окт  4 10:22 engine-id
+drwx------  3 root root  4096 окт  4 10:22 image/
+drwxr-x---  3 root root  4096 окт  4 10:22 network/
+drwx--x--- 41 root root 12288 окт  4 17:22 overlay2/
+drwx------  4 root root  4096 окт  4 10:22 plugins/
+drwx------  2 root root  4096 окт  4 17:22 runtimes/
+drwx------  2 root root  4096 окт  4 10:22 swarm/
+drwx------  2 root root  4096 окт  4 17:22 tmp/
+drwx-----x  3 root root  4096 окт  4 17:22 volumes/
